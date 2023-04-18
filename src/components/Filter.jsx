@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { setFilter } from 'redux/filterSlice';
 import { getFilter } from 'redux/selectors';
 import { getContacts } from 'redux/selectors';
-import { getVisibleContacts } from 'redux/visibleContacts';
+import { getVisibleContacts } from 'functions/getVisibleContacts';
 import { INFO } from 'redux/constants';
 import { Label, Input } from './contactForm/ContactForm_Style';
 

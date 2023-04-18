@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getVisibleContacts } from 'redux/visibleContacts';
+import { getVisibleContacts } from 'functions/getVisibleContacts';
 import { getContacts, getFilter } from 'redux/selectors';
 import { Contact } from 'components/contact/Contact';
 import { Item } from './ContactList_Style';
@@ -7,7 +7,8 @@ import { Item } from './ContactList_Style';
 const ContactList = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
-  const visibleContacts = contacts.length > 0 && getVisibleContacts(contacts, filter);
+  const visibleContacts =
+    contacts.length > 0 && getVisibleContacts(contacts, filter);
   return (
     visibleContacts.length > 0 && (
       <ul>
@@ -17,7 +18,7 @@ const ContactList = () => {
           </Item>
         ))}
       </ul>
-    )    
+    )
   );
 };
 
